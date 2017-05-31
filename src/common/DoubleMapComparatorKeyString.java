@@ -21,7 +21,6 @@
 package common;
 
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.Map;
 
 public class DoubleMapComparatorKeyString implements Comparator<String> {

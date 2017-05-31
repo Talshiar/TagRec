@@ -22,7 +22,6 @@ package itemrecommendations;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -31,10 +30,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import processing.BLLCalculator;
 import common.Bookmark;
-import common.Utilities;
-import file.BookmarkReader;
 
 /**
  * Tag-weighted, time-weighted and combined strategy used by Zheng & Li

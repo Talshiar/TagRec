@@ -21,21 +21,12 @@
 package itemrecommendations;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import processing.BLLCalculator;
 
-import com.google.common.base.Stopwatch;
 import com.google.common.primitives.Ints;
 
 import common.DoubleMapComparator;

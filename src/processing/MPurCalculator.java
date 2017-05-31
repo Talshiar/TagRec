@@ -54,7 +54,7 @@ public class MPurCalculator {
 	
 	public MPurCalculator(BookmarkReader reader, int trainSize, int beta, boolean userBased, boolean resBased) {
 		this.reader = reader;
-		this.beta = (double)beta / 10.0;
+		this.beta = beta / 10.0;
 		this.userBased = userBased;
 		this.resBased = resBased;
 		

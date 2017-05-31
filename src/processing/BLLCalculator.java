@@ -35,7 +35,6 @@ import common.CalculationType;
 import common.CooccurenceMatrix;
 import common.DoubleMapComparator;
 import common.Bookmark;
-import common.MapUtil;
 import common.MemoryThread;
 import common.PerformanceMeasurement;
 import common.Utilities;
@@ -69,7 +68,7 @@ public class BLLCalculator {
 	public BLLCalculator(BookmarkReader reader, int trainSize, double dVal, int beta, boolean userBased, boolean resBased, CalculationType cType, Double lambda) {
 		this.reader = reader;
 		this.dVal = dVal;//(double)dVal / 10.0;
-		this.beta = (double)beta / 10.0;
+		this.beta = beta / 10.0;
 		this.userBased = userBased;
 		this.resBased = resBased;
 		

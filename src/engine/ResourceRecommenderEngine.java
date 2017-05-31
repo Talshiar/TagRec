@@ -48,6 +48,7 @@ public class ResourceRecommenderEngine implements EngineInterface {
 		this.reader = new BookmarkReader(0, false);
 	}
 	
+	@Override
 	public void loadFile(String path, String filename) throws Exception {
 		BookmarkReader reader = EngineUtils.getSortedBookmarkReader(path, filename);
 
@@ -60,6 +61,7 @@ public class ResourceRecommenderEngine implements EngineInterface {
 		resetStructure(reader, calculator, tagCalculator, cbCalculator, resCFCalculator, topResources);
 	}
 
+	@Override
 	public synchronized Map<String, Double> getEntitiesWithLikelihood(String user, String resource, List<String> topics, Integer count, Boolean filterOwnEntities, Algorithm algorithm, EntityType type) {
 		if (count == null || count.doubleValue() < 1) {
 			count = 10;

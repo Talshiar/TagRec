@@ -97,8 +97,8 @@ public class GIRPTMCalculator {
 		}
 		
 		for (Map.Entry<Integer, Integer> firstIndex : firstUsages.entrySet()) {
-			double firstVal = Math.log((double)(testIndex - firstIndex.getValue()));
-			double lastVal = Math.log((double)(testIndex - lastUsages.get(firstIndex.getKey())));
+			double firstVal = Math.log(testIndex - firstIndex.getValue());
+			double lastVal = Math.log(testIndex - lastUsages.get(firstIndex.getKey()));
 			Double rec = firstVal * (Math.pow(lastVal, firstVal * (-1.0)));
 			if (!rec.isNaN() && !rec.isInfinite()) {
 				resultMap.put(firstIndex.getKey(), rec.doubleValue());

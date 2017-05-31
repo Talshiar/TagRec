@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -24,7 +23,10 @@ public class MovielensProcessor {
 				String line = null;
 				while ((line = br.readLine()) != null) {
 					String[] lineParts = line.split("::");
-					ratingMap.put(lineParts[0] + "_" + lineParts[1], lineParts[2]);
+					if (lineParts.length >= 3)
+					{
+						ratingMap.put(lineParts[0] + "_" + lineParts[1], lineParts[2]);
+					}
 				}
 				br.close();
 			}

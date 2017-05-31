@@ -24,7 +24,6 @@ import processing.ThreeLTCalculator;
 import file.BookmarkReader;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,6 +44,7 @@ public class ThreeLayersEngine implements EngineInterface {
 		this.reader = null;
 	}
 	
+	@Override
 	public void loadFile(String path, String filename) throws Exception {
 		BookmarkReader reader = EngineUtils.getSortedBookmarkReader(path, filename);
 
@@ -53,6 +53,7 @@ public class ThreeLayersEngine implements EngineInterface {
 		resetStructure(reader, calculator, topTags);
 	}
 
+	@Override
 	public synchronized Map<String, Double> getEntitiesWithLikelihood(String user, String resource, List<String> topics, Integer count, Boolean filterOwnEntities, Algorithm algorithm, EntityType type) {
 		if (count == null || count.doubleValue() < 1) {
 			count = 10;

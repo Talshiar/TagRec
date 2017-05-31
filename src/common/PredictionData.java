@@ -220,7 +220,7 @@ public class PredictionData {
 			for (String tag : this.predictionData) {
 				int tagID = Integer.parseInt(tag);
 				Integer tagCount = tagFrequencyMap.get(tagID);
-				double iff = Math.log(((double)tagFrequencyMap.size() + 1.0) / ((tagCount == null ? 0.0 : tagCount.doubleValue()) + 1.0));
+				double iff = Math.log((tagFrequencyMap.size() + 1.0) / ((tagCount == null ? 0.0 : tagCount.doubleValue()) + 1.0));
 				double disc = 1.0 / Math.log(1.0 + i++);
 				serendipity += (disc * iff);
 				if (iff > maxIFF) {

@@ -45,7 +45,8 @@ public class SeparatedWeightInitializationStrategy implements WeightInitializati
     /**
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.strategy.WeightInitializationStrategy#initalizeWeights(org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.data.FolkRankParam, double[][], double[], double[])
      */
-    public void initalizeWeights(FolkRankPref pref, double[][] weights, double[] prefWeights, double[] prefWeightsNormFactors) {
+    @Override
+	public void initalizeWeights(FolkRankPref pref, double[][] weights, double[] prefWeights, double[] prefWeightsNormFactors) {
         /*
          * check input arguments
          */

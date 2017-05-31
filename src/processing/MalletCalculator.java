@@ -47,7 +47,6 @@ import cc.mallet.types.InstanceList;
 import file.BookmarkWriter;
 import file.PredictionFileWriter;
 import file.BookmarkReader;
-import file.BookmarkSplitter;
 
 public class MalletCalculator {
 

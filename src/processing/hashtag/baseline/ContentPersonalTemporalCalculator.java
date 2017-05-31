@@ -8,14 +8,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
-import org.apache.solr.common.util.Hash;
-
 import common.DoubleMapComparator;
-import common.Similarity;
-import net.sf.javaml.utils.MathUtils;
 
 /**
  * @author spujari This tag recommendation is based on the method explained in

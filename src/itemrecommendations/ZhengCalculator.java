@@ -21,19 +21,15 @@
 package itemrecommendations;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
 import com.google.common.primitives.Ints;
 
 import common.Bookmark;
 import common.DoubleMapComparator;
-import common.Features;
 import common.Similarity;
 import common.Utilities;
 import file.BookmarkReader;

@@ -24,6 +24,7 @@ public class MemoryThread extends TimerTask {
 	    }
 	}
 	
+	@Override
 	public void run() {
 		trackMaxMemory();
 	}

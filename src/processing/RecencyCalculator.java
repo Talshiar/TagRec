@@ -5,17 +5,9 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TreeMap;
-import java.util.concurrent.TimeUnit;
-
-import com.google.common.base.Stopwatch;
 import com.google.common.primitives.Ints;
 
-import common.DoubleMapComparator;
 import common.Bookmark;
-import common.MemoryThread;
-import common.PerformanceMeasurement;
 import common.Utilities;
 import file.PredictionFileWriter;
 import file.BookmarkReader;

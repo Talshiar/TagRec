@@ -27,8 +27,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import file.BookmarkReader;
-
 public class TagRecommenderEvalEngine implements EngineInterface {
 
 	private EngineInterface lmEngine;

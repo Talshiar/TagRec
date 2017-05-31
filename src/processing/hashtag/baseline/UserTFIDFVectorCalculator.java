@@ -38,7 +38,7 @@ public class UserTFIDFVectorCalculator{
             double tfIdf = 0d;
             double idfScore = getHashtagIDF(numberOfUsersOfTag, numberOfUsersDataset);
             System.out.println(" idfScore >> " + idfScore);
-            tfIdf = (double)tagUsageCountOfUser * idfScore;
+            tfIdf = tagUsageCountOfUser * idfScore;
             System.out.println(" tfidf score >> " + tfIdf);
             return tfIdf;
         }

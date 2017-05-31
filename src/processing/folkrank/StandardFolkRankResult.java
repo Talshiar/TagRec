@@ -47,36 +47,42 @@ public class StandardFolkRankResult implements FolkRankResult {
     /**
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.data.FolkRankResult#getWeights()
      */
-    public double[][] getWeights() {
+    @Override
+	public double[][] getWeights() {
         return weights;
     }
     /**
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.data.FolkRankResult#setWeights(double[][])
      */
-    public void setWeights(double[][] weights) {
+    @Override
+	public void setWeights(double[][] weights) {
         this.weights = weights;
     }
 
     /**
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.data.FolkRankResult#getErrors()
      */
-    public LinkedList<Double> getErrors() {
+    @Override
+	public LinkedList<Double> getErrors() {
         return errors;
     }
     /**
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.data.FolkRankResult#addError(double)
      */
-    public void addError(double error) {
+    @Override
+	public void addError(double error) {
         this.errors.add(error);
     }
     
     /*
      * not supported by this implementation
      */
-    public double[][] getAPRWeights() {
+    @Override
+	public double[][] getAPRWeights() {
         return null;
     }
-    public void setAPRWeights(double[][] weights) {
+    @Override
+	public void setAPRWeights(double[][] weights) {
     }
     
 }

@@ -97,7 +97,7 @@ public class CatDescFiltering {
 	}
 	
 	private double getTPP(int userID) {
-		double tpp = Utilities.getMapCount(this.userMaps.get(userID)) / (double)this.userResourceLists.get(userID).size();
+		double tpp = Utilities.getMapCount(this.userMaps.get(userID)) / this.userResourceLists.get(userID).size();
 		return tpp;
 	}
 	

@@ -19,17 +19,12 @@
  */
 package file;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import com.google.common.primitives.Ints;
 
 import common.Bookmark;
 import common.Utilities;
@@ -207,7 +202,7 @@ public class BookmarkSplitter {
 				userSize = this.reader.getUserCounts().get(currentUser);			
 				userIndex = 1;
 				indices.clear();
-				int limit = (int)((double)percentage / 100.0 * (double)userSize);
+				int limit = (int)(percentage / 100.0 * userSize);
 				if (tagRec && limit == 0 && userSize > 1) {
 					limit++;
 				}

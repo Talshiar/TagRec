@@ -24,7 +24,6 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -222,7 +221,7 @@ public class Utilities {
             to.put(value, (count != null ? count + 1.0 : 1.0));
         }
         for (Map.Entry<Integer, Double> entry : to.entrySet()) {
-            entry.setValue(entry.getValue() / (double) from.size());
+            entry.setValue(entry.getValue() / from.size());
         }
         return to;
     }
@@ -311,7 +310,7 @@ public class Utilities {
             double count = getMapCount(m);
             Map<Integer, Double> relM = new LinkedHashMap<Integer, Double>();
             for (Map.Entry<Integer, Integer> entry : m.entrySet()) {
-                relM.put(entry.getKey(), (double) entry.getValue().intValue() / count);
+                relM.put(entry.getKey(), entry.getValue().intValue() / count);
             }
             relMaps.add(relM);
         }
@@ -338,7 +337,7 @@ public class Utilities {
             double count = getMapCount(m);
             Map<Integer, Double> relM = new LinkedHashMap<Integer, Double>();
             for (Map.Entry<Integer, Integer> entry : m.entrySet()) {
-                relM.put(entry.getKey(), (double) entry.getValue().intValue() / count);
+                relM.put(entry.getKey(), entry.getValue().intValue() / count);
             }
             relMaps.add(relM);
         }
@@ -352,7 +351,7 @@ public class Utilities {
             double denom = getMapDenom(m);
             Map<Integer, Double> relM = new LinkedHashMap<Integer, Double>();
             for (Map.Entry<Integer, Integer> entry : m.entrySet()) {
-                relM.put(entry.getKey(), Math.exp((double) entry.getValue().intValue()) / denom);
+                relM.put(entry.getKey(), Math.exp(entry.getValue().intValue()) / denom);
             }
             relMaps.add(relM);
         }
@@ -435,7 +434,7 @@ public class Utilities {
         double sum = 0.0;
         if (map != null) {
             for (Integer val : map.values()) {
-                sum += Math.exp((double) val);
+                sum += Math.exp(val);
             }
         }
         return sum;

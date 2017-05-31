@@ -38,7 +38,7 @@ public class CFTagRecommender {
 		this.reader = reader;
 		this.userBased = userBased;
 		this.resBased = resBased;
-		this.beta = (double)beta / 10.0;
+		this.beta = beta / 10.0;
 		this.trainList = this.reader.getBookmarks().subList(0, trainSize);
 		//Collections.sort(this.trainList);
 		if (this.userBased) {
@@ -186,9 +186,9 @@ public class CFTagRecommender {
 			double idf = getIDF(targetVal.getKey(), neighborMaps);
 			double tftd = 0.0;
 			if (nMap.containsKey(targetVal.getKey())) {
-				tftd = (double)nMap.get(targetVal.getKey());
+				tftd = nMap.get(targetVal.getKey());
 			}
-			double tftq = (double)targetVal.getValue();
+			double tftq = targetVal.getValue();
 			double ld = Utilities.getMapCount(nMap);
 			double bm25Val = (idf * (K1 + 1) * tftd * (K3 + 1) * tftq) /
 					((K1 * ((1 - B) + B * (ld / lAverage)) + tftd) * (K3 + tftq));
@@ -244,7 +244,7 @@ public class CFTagRecommender {
 		for (Map<Integer, Integer> map : neighborMaps) {
 			sum += Utilities.getMapCount(map);
 		}
-		return sum / (double)neighborMaps.size();
+		return sum / neighborMaps.size();
 	}
 	
 	// Statics --------------------------------------------------------------------------------------------------------

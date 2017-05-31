@@ -29,10 +29,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import processing.BLLCalculator;
 import common.Bookmark;
-import common.Utilities;
-import file.BookmarkReader;
 
 /**
  * Tag-weighted, time-weighted and combined strategy used by Zheng & Li

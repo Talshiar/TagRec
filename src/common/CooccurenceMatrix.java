@@ -20,14 +20,10 @@
 
 package common;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
-
 import net.sf.javaml.clustering.mcl.SparseMatrix;
 import net.sf.javaml.clustering.mcl.SparseVector;
 

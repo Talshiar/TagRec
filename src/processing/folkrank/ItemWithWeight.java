@@ -108,7 +108,8 @@ public class ItemWithWeight implements Comparable<ItemWithWeight> {
      * 
      * @see java.lang.Comparable#compareTo(java.lang.Object)
      */
-    public int compareTo(ItemWithWeight o) {
+    @Override
+	public int compareTo(ItemWithWeight o) {
         if (o == null) { throw new NullPointerException(); }
         int sgn = (int) Math.signum(o.weight - this.weight);
         if (sgn != 0) {
@@ -120,7 +121,8 @@ public class ItemWithWeight implements Comparable<ItemWithWeight> {
     /**
      * @see java.lang.Object#hashCode()
      */
-    public int hashCode () {
+    @Override
+	public int hashCode () {
         return item;
     }
     

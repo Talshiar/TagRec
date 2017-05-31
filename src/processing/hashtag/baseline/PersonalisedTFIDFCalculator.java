@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.solr.common.util.Hash;
-
-import processing.hashtag.TagRecommendationUtil;
-
 /**
  * This class implements a version of collaborative filtering algorithm that
  * assign score to the hashtags and rank hashtags based on this score. The main

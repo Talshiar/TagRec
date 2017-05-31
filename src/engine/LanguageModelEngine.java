@@ -45,6 +45,7 @@ public class LanguageModelEngine implements EngineInterface {
 		reader = null;
 	}
 
+	@Override
 	public void loadFile(String path, String filename) throws Exception {
 		BookmarkReader reader = EngineUtils.getSortedBookmarkReader(path, filename);
 		
@@ -74,6 +75,7 @@ public class LanguageModelEngine implements EngineInterface {
 		resetStructures(userMaps, resMaps, reader, topTags);
 	}
 
+	@Override
 	public synchronized Map<String, Double> getEntitiesWithLikelihood(String user, String resource, List<String> topics, Integer count, Boolean filterOwnEntities, Algorithm algorithm, EntityType type) {
 		if (count == null || count.doubleValue() < 1) {
 			count = 10;

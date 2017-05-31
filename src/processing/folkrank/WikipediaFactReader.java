@@ -39,7 +39,8 @@ public class WikipediaFactReader implements FactReader {
         this.tagIndex = -1;
     }
 
-    public String[] getFact() throws FactReadingException {
+    @Override
+	public String[] getFact() throws FactReadingException {
     	Bookmark data = this.reader.getBookmarks().get(this.lineIndex);
     	String[] fact = new String[this.noOfDimensions];
 
@@ -50,7 +51,8 @@ public class WikipediaFactReader implements FactReader {
     	return fact;
     }
 
-    public boolean hasNext() throws FactReadingException {
+    @Override
+	public boolean hasNext() throws FactReadingException {
     	if (this.lineIndex < this.trainSize) {
     		Bookmark data = this.reader.getBookmarks().get(this.lineIndex);
     		if (++this.tagIndex < data.getTags().size()) {
@@ -73,16 +75,19 @@ public class WikipediaFactReader implements FactReader {
     	return false;
     }
 
-    public void reset() throws FactReadingException {
+    @Override
+	public void reset() throws FactReadingException {
     	this.lineIndex = 0;
     	this.tagIndex = -1;
     }
 
-    public int getNoOfDimensions() throws FactReadingException {
+    @Override
+	public int getNoOfDimensions() throws FactReadingException {
         return this.noOfDimensions;
     }
 
-    public void close() throws FactReadingException {
+    @Override
+	public void close() throws FactReadingException {
     	reset();
     }
 }

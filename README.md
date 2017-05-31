@@ -199,7 +199,7 @@ _Bibtex:_
 * [Dominik Kowald](http://www.dominikkowald.info/), Know-Center, Graz University of Technology, dkowald [AT] know [MINUS] center [DOT] at (general contact)
 
 ## Contacts and contributors
-* Simone Kopeinik, Knowledge Technologies Institute, Graz University of Technology, simone [DOT] [AT] tugraz [DOT] at (sustain resource recommender algorithm)
+* Simone Kopeinik, Knowledge Technologies Institute, Graz University of Technology, simone [DOT] tugraz [DOT] at (sustain resource recommender algorithm)
 * Emanuel Lacic, Knowledge Technologies Institute, Graz University of Technology, elacic [AT] know [MINUS] center [DOT] at (huang, zheng and CIRTT resource recommender algorithms)
 * Subhash Pujari, Knowledge Technologies Institute, Graz University of Technology, spujari [AT] student [DOT] tugraz [DOT] at (twitter hashtag recommender algorithms)
 * Elisabeth Lex, Knowledge Technologies Institute, Graz University of Technology, elisabeth [DOT] lex [AT] tugraz [DOT] at (general contact)

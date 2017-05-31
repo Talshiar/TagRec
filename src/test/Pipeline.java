@@ -26,21 +26,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import cc.mallet.topics.ParallelTopicModel;
-import cc.mallet.types.InstanceList;
 import common.Bookmark;
 import common.CalculationType;
 import common.Features;
 import common.Utilities;
-import engine.Algorithm;
-import engine.EngineInterface;
-import engine.EntityRecommenderEngine;
-import engine.EntityType;
-import engine.TagRecommenderEvalEngine;
 import file.BookmarkReader;
 import file.BookmarkSplitter;
 import file.postprocessing.CatDescFiltering;
@@ -65,7 +57,6 @@ import processing.MPCalculator;
 import processing.MPurCalculator;
 import processing.MalletCalculator;
 import processing.MetricsCalculator;
-import processing.RecencyCalculator;
 import processing.ThreeLTCalculator;
 import processing.analyzing.UserTagDistribution;
 import processing.hashtag.HashtagRecommendationEngine;
@@ -74,7 +65,6 @@ import processing.hashtag.analysis.ProcessFrequencyRecencySocial;
 import processing.hashtag.social.SocialStrengthCalculator;
 import processing.hashtag.solr.CFSolrHashtagCalculator;
 import processing.hashtag.solr.SolrHashtagCalculator;
-import processing.hashtag.solr.Tweet;
 
 public class Pipeline {
 
@@ -646,7 +636,7 @@ public class Pipeline {
                         MAX_USER_BOOKMARKS, MIN_RESOURCE_BOOKMARKS, MAX_RESOURCE_BOOKMARKS, filter, true, trainSize);
             }
             MetricsCalculator.writeAverageMetrics(sampleDir + "/" + prefix + topicString + "_metrics", i,
-                    (double) sampleCount, true, i == k, DESCRIBER);
+                    sampleCount, true, i == k, DESCRIBER);
         }
         MetricsCalculator.resetMetrics();
 
@@ -899,7 +889,7 @@ public class Pipeline {
                         MAX_USER_BOOKMARKS, MIN_RESOURCE_BOOKMARKS, MAX_RESOURCE_BOOKMARKS, null, false, trainSize);
             }
             MetricsCalculator.writeAverageMetrics(sampleDir + "/" + prefix + topicString + "metrics", i,
-                    (double) sampleCount, false, i == k, null);
+                    sampleCount, false, i == k, null);
         }
     }
 }

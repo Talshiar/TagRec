@@ -47,8 +47,8 @@ public class ThreeLTCalculator {
 		this.reader = reader;
 		this.trainList = this.reader.getBookmarks().subList(0, trainSize);
 		this.userBookmarks = Utilities.getBookmarks(this.trainList, false);
-		this.beta = (double)beta / 10.0;
-		this.dValue = (double)dValue / 10.0;
+		this.beta = beta / 10.0;
+		this.dValue = dValue / 10.0;
 		this.userBased = userBased;
 		this.resBased = resBased;		
 		this.bookmarkBLL = bookmarkBLL;		

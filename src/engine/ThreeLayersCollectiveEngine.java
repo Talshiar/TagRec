@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import common.CalculationType;
-import processing.BLLCalculator;
 import processing.ThreeLTCalculator;
 import file.BookmarkReader;
 
@@ -15,6 +14,7 @@ public class ThreeLayersCollectiveEngine implements EngineInterface {
 	private BookmarkReader reader = null;
 	private ThreeLTCalculator calculator = null;
 	
+	@Override
 	public void loadFile(String path, String filename) throws Exception {
 		BookmarkReader reader = EngineUtils.getSortedBookmarkReader(path, filename);
 		ThreeLTCalculator calculator = new ThreeLTCalculator(reader, reader.getBookmarks().size(), 5, 5, true, false, false, CalculationType.NONE);

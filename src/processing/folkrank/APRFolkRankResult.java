@@ -32,16 +32,16 @@
  **/
 package processing.folkrank;
 
-import java.util.Arrays;
-
 public class APRFolkRankResult extends StandardFolkRankResult implements FolkRankResult {
     
     private double[][] weights;
     
-    public double[][] getAPRWeights() {
+    @Override
+	public double[][] getAPRWeights() {
         return weights;
     }
-    public void setAPRWeights(double[][] weights) {
+    @Override
+	public void setAPRWeights(double[][] weights) {
         // copy weights, because array is overwritten
         this.weights = new double[weights.length][];
         for (int dim = 0; dim < weights.length; dim++) {

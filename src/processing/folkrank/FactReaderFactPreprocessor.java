@@ -84,7 +84,8 @@ public class FactReaderFactPreprocessor implements FactPreprocessor {
      * 
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.process.FactPreprocessor#process()
      */
-    public void process() {
+    @Override
+	public void process() {
         try {
             int noOfDimensions = reader.getNoOfDimensions();
             
@@ -206,7 +207,8 @@ public class FactReaderFactPreprocessor implements FactPreprocessor {
     /** Returns the filled data for the FolkRank.
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.process.FactPreprocessor#getFolkRankData()
      */
-    public FolkRankData getFolkRankData() {
+    @Override
+	public FolkRankData getFolkRankData() {
         return facts;
     }
 
@@ -214,14 +216,16 @@ public class FactReaderFactPreprocessor implements FactPreprocessor {
      * subsequent call to {@link #process()} will map them to integers.
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.process.FactPreprocessor#setPrefItems(java.lang.String[][])
      */
-    public void setPrefItems(String[][] prefItems) {
+    @Override
+	public void setPrefItems(String[][] prefItems) {
         this.stringPrefItems = prefItems;
     }
 
     /** Returns the integer representation of the preference items.
      * @see org.semanticdesktop.nepomuk.comp.folkpeer.folkrank.process.FactPreprocessor#getPrefItems()
      */
-    public int[][] getPrefItems() {
+    @Override
+	public int[][] getPrefItems() {
         return intPrefItems;
     }
 }
