@@ -129,7 +129,11 @@ public class BookmarkSplitter {
 			Bookmark testB = null;
 			for (int i = uBookmarks.size() - 1; i >= 0; i--) {
 				Bookmark b = uBookmarks.get(i);
-				boolean isTestUser = testUsers.contains(this.reader.getUsers().get(b.getUserID()));
+				boolean isTestUser = false;
+				try {
+					isTestUser = testUsers.contains(this.reader.getUsers().get(b.getUserID()));
+				} catch (NullPointerException ex) {					
+				}
 				if (isTestUser && !isColdStartUser && !putTestB) {
 					if (!b.getTitle().equals(titleCondition)) {
 						testB = b;
@@ -243,11 +247,12 @@ public class BookmarkSplitter {
 			if (percentage > 0) {
 				splitter.leavePercentageOutSplit(sampleName, percentage, true, null, tagRec, realNames, coldStart);
 			} else {
-				if (condition == null) {
+				splitter.leaveLastOutSplit(sampleName, coldStart, realNames, userWhiteList);
+				/*if (condition == null) {
 					splitter.leaveLastOutSplit(sampleName, coldStart, realNames, userWhiteList);
 				} else {
 					splitter.leaveLastOutSplitWithCondition(sampleName, realNames, userWhiteList, condition);
-				}
+				}*/
 			}
 		}
 	}
