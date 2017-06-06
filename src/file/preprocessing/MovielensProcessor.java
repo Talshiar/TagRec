@@ -22,7 +22,7 @@ public class MovielensProcessor {
 				BufferedReader br = new BufferedReader(reader);
 				String line = null;
 				while ((line = br.readLine()) != null) {
-					String[] lineParts = line.split("::");
+					String[] lineParts = line.split(",");
 					if (lineParts.length >= 3)
 					{
 						ratingMap.put(lineParts[0] + "_" + lineParts[1], lineParts[2]);
@@ -41,7 +41,7 @@ public class MovielensProcessor {
 			List<String> tags = new ArrayList<String>();
 			
 			while ((line = br.readLine()) != null) {
-				String[] lineParts = line.split("::");
+				String[] lineParts = line.split(",");
 				String tag = lineParts[2];
 				//if (!filter || (!tag.contains("no-tag") && !tag.contains("-import"))) {
 					if (!resID.isEmpty() && !userHash.isEmpty() && (!resID.equals(lineParts[1]) || !userHash.equals(lineParts[0]))) {

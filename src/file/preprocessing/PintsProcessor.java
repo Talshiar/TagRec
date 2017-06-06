@@ -29,6 +29,7 @@ public class PintsProcessor {
 			BufferedWriter bw = new BufferedWriter(writer);
 			String line = null;
 			String resID = "", userHash = "", timestamp = "", tag = "";
+			int counter = 0;
 			
 			while ((line = br.readLine()) != null) {
 				String[] lineParts = line.split("\t");
@@ -48,10 +49,15 @@ public class PintsProcessor {
 					tagMap.put(userHash + "_" + resID, tags);
 					timestamps.add(timestamp);
 					if (timestamps.size() % 100000 == 0) {
+						counter++;
 						System.out.println("READ 100000 bookmarks");
 					}
 				}
 				tags.add(tag);
+				if (counter == 10)
+				{
+					break;
+				}
 			}
 			
 			int i = 0;
